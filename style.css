@@ -123,3 +123,32 @@ input:nth-child(4):checked ~ .nav-text .text .text-par:nth-child(4) {
 #radio-btn4:checked ~ .slides-input .flipped {
     margin-left: -75%;
 }
+
+@media (max-width: 655px) {
+
+    .slider {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-text {
+        flex-direction: column-reverse;
+    }
+
+    .nav {
+        text-align: center;
+    }
+
+    .slides-input {
+        height: 70%;
+    }
+
+    .meme-image {
+        height: 100%;
+    }
+
+    .nav-text {
+        gap: 3em;
+    }
+    
+}
