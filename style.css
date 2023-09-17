@@ -56,8 +56,11 @@ input {
 }
 
 .text-par {
-    display: none;
+    height: 0;
+    overflow: hidden;
     color: rgb(246, 248, 251);
+    opacity: 0;
+    transition: all 0.8s;
 }
 
 .nav-lab {
@@ -93,7 +96,8 @@ input:nth-child(1):checked ~ .nav-text .text .text-par:nth-child(1),
 input:nth-child(2):checked ~ .nav-text .text .text-par:nth-child(2),
 input:nth-child(3):checked ~ .nav-text .text .text-par:nth-child(3),
 input:nth-child(4):checked ~ .nav-text .text .text-par:nth-child(4) {
-    display: block;
+    height: auto;
+    opacity: 1;
 }
 
 .nav-lab:hover {
