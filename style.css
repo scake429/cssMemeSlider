@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     box-sizing: border-box;
     padding: 15px;
@@ -94,6 +98,10 @@ input:nth-child(4):checked ~ .nav-text .text .text-par:nth-child(4) {
 
 .nav-lab:hover {
     background-color: rgb(199, 213, 236);
+}
+
+.flipped {
+    transition: margin-left 0.3s ease-out;
 }
 
 #radio-btn1:checked ~ .slides-input .flipped {
