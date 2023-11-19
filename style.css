@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     box-sizing: border-box;
     padding: 15px;
@@ -52,8 +56,11 @@ input {
 }
 
 .text-par {
-    display: none;
+    height: 0;
+    overflow: hidden;
     color: rgb(246, 248, 251);
+    opacity: 0;
+    transition: all 0.8s;
 }
 
 .nav-lab {
@@ -89,11 +96,16 @@ input:nth-child(1):checked ~ .nav-text .text .text-par:nth-child(1),
 input:nth-child(2):checked ~ .nav-text .text .text-par:nth-child(2),
 input:nth-child(3):checked ~ .nav-text .text .text-par:nth-child(3),
 input:nth-child(4):checked ~ .nav-text .text .text-par:nth-child(4) {
-    display: block;
+    height: auto;
+    opacity: 1;
 }
 
 .nav-lab:hover {
     background-color: rgb(199, 213, 236);
+}
+
+.flipped {
+    transition: margin-left 0.3s ease-out;
 }
 
 #radio-btn1:checked ~ .slides-input .flipped {
@@ -110,4 +122,33 @@ input:nth-child(4):checked ~ .nav-text .text .text-par:nth-child(4) {
 
 #radio-btn4:checked ~ .slides-input .flipped {
     margin-left: -75%;
+}
+
+@media (max-width: 655px) {
+
+    .slider {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-text {
+        flex-direction: column-reverse;
+    }
+
+    .nav {
+        text-align: center;
+    }
+
+    .slides-input {
+        height: 70%;
+    }
+
+    .meme-image {
+        height: 100%;
+    }
+
+    .nav-text {
+        gap: 3em;
+    }
+    
 }
